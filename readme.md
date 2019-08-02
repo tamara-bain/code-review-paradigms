@@ -37,10 +37,10 @@ Modules and classes should be cohesive - related content should be grouped toget
 Names should be descriptive without being too long. They should be clearly differentiated from other names in the code block. Ideal names for debugging average 10-16 characters long.
 
 ### 12. Best Practices
-Effort should be made to follow best practices of the language or framework. Avoid doing things that are specifically recommended against by the framework or language.
+Effort should be made to follow best practices of the language or framework. Avoid doing things that are specifically recommended against by the framework or language. This reduces friction for other people editing/maintaining your code because it reads in a style they are familiar with. It also reduces the likelyhood that changes in packages/frameworks interfere with our codebase. 
 
 ### 13. Efficiency
-Do things with reasonable efficiency for 10x our current level of growth. Avoid premature optimization unless the effort to do so is identical to not doing so.
+Do things with reasonable efficiency for 10x our current level of growth. Avoid premature optimization unless the effort to do so is identical to not doing so. This should prevent anything grossly inefficient from getting into our codebase without adding unneccessary complexity. 
 
 
 ## Perspectives of a Code Review
