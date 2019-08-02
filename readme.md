@@ -40,7 +40,7 @@ Names should be descriptive without being too long. They should be clearly diffe
 Effort should be made to follow best practices of the language or framework and existing structure in the code base. Avoid doing things that are specifically recommended against by the framework or language. This reduces friction for other people editing/maintaining your code because it reads in a style they are familiar with. It also reduces the likelyhood that changes in packages/frameworks interfere with our codebase. 
 
 ### 13. Efficiency
-Do things with reasonable efficiency for 10x our current level of growth. Avoid premature optimization unless the effort to do so is identical to not doing so. This should prevent anything grossly inefficient from getting into our codebase without adding unneccessary complexity. 
+Do things with reasonable efficiency for 10x our current level of growth. Avoid premature optimization unless the effort to do so is identical to not doing so. This should prevent anything grossly inefficient from getting into our codebase without adding unneccessary complexity. Should this code run asyncronously instead of syncronously?
 
 
 ## Perspectives of a Code Review
@@ -48,10 +48,22 @@ Do things with reasonable efficiency for 10x our current level of growth. Avoid 
 These are perspectives to read through the code with after completing the above assessment. 
 
 ### Not complete
-Read through the code looking for completeness. Does the program cover everything it is supposed to do? Is there any feature missing? (hotspots: analytics, error reporting, uptime monitoring, async. tasks, caching)
+Read through the code looking for completeness. Does the program cover everything it is supposed to do? Is there any feature missing? Things that may be missing:
+
+- Async tasks
+- Error reporting
+- Uptime montiors
+- Analytics
+- Locks
+- Caching
+- Tests
 
 ### Wrong result
 Read through the code looking for correctness. Is there anything in the program that could give the wrong result? Are calculations correct? Is the control flow logic correct? Is the business logic correct? 
 
 ### Hard to maintain
 Read through the code imagining yourself maintaining it. Is there anything that would be difficult to maintain? Is there anything that is confusing or hard to read? Would it be hard to refactor or change in the future? Will it create inefficiencies that will interfere with the operation of the program?
+
+### User experience
+If it is a frontend feature - is the feature achieving a good user experience? On the backend - will this endpoint load quickly? Would an error state be confusing to a user? Is it doing what a user expects?
+
