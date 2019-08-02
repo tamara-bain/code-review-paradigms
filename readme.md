@@ -54,4 +54,4 @@ Read through the code looking for completeness. Does the program cover everythin
 Read through the code looking for correctness. Is there anything in the program that could give the wrong result? Are calculations correct? Is the control flow logic correct? Is the business logic correct? 
 
 ### Hard to maintain
-Read through the code imagining yourself maintaining it. Is there anything that would be difficult to maintain? Is there anything that is confusing or hard to remember? Would it be hard to refactor or change in the future? Will it create inefficiencies that will interfere with the operation of the program?
+Read through the code imagining yourself maintaining it. Is there anything that would be difficult to maintain? Is there anything that is confusing or hard to read? Would it be hard to refactor or change in the future? Will it create inefficiencies that will interfere with the operation of the program?
