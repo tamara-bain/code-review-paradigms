@@ -42,6 +42,9 @@ Effort should be made to follow best practices of the language or framework and 
 ### 13. Efficiency
 Do things with reasonable efficiency for 10x our current level of growth. Avoid premature optimization unless the effort to do so is identical to not doing so. This should prevent anything grossly inefficient from getting into our codebase without adding unneccessary complexity. Should this code run asyncronously instead of syncronously?
 
+### 14. Exceptions
+No generic exceptions. Generic exception can catch errors we would rather thrown. Prefer assert statements or typed exceptions.
+
 
 ## Perspectives of a Code Review
 
